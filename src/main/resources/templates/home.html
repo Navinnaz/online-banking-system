@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Online Banking</title>
+</head>
+<body>
+    <h1>Welcome, <span th:text="${account.name}"></span></h1>
+    <p>Account Balance: ₹<span th:text="${account.balance}"></span></p>
+
+    <form action="/deposit" method="post">
+        <input type="number" name="amount" placeholder="Amount to Deposit" required>
+        <button type="submit">Deposit</button>
+    </form>
+
+    <form action="/withdraw" method="post">
+        <input type="number" name="amount" placeholder="Amount to Withdraw" required>
+        <button type="submit">Withdraw</button>
+    </form>
+</body>
+</html>
